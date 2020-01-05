@@ -4,6 +4,7 @@
 
 sudo apt update
 sudo apt upgrade
+sudo apt autoremove
 
 # remove built-in vi << vim-tiny
 # install full version of vim
