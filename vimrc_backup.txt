@@ -1,0 +1,130 @@
+" .vimrc
+
+" = = = = = = = = = = = = = = = = = = = = =
+" VundleVim                               =
+" = = = = = = = = = = = = = = = = = = = = =
+
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" Custom Plugin here >>>
+
+Plugin 'altercation/vim-colors-solarized'
+
+" Custom Plugin here <<
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+" = = = = = = = = = = = = = = = = = = = = =
+" Basic                                   =
+" = = = = = = = = = = = = = = = = = = = = =
+
+" Turn on the Wild menu
+set wildmenu
+
+" Always show the status line
+set laststatus=2
+
+"Always show current position
+set ruler
+
+" Height of the command bar
+set cmdheight=1
+
+" Ignore case when searching
+set ignorecase
+
+" Add a bit extra margin to the left
+set foldcolumn=1
+
+" Turn backup off
+set nobackup
+set nowb
+set noswapfile
+
+" Ignore compiled files
+set wildignore=*.o,*~,*.pyc
+if has("win16") || has("win32")
+    set wildignore+=.git\*,.hg\*,.svn\*
+else
+    set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
+endif
+
+" = = = = = = = = = = = = = = = = = = = = =
+" Color & Fonts                           =
+" = = = = = = = = = = = = = = = = = = = = =
+
+if exists('$TMUX')
+    if has('nvim')
+        set termguicolors
+    else
+        set term=screen-256color
+    endif
+endif
+
+" Enable syntax highlighting
+syntax enable 
+
+let g:solarized_termcolors=256
+
+set background=dark
+
+"colorscheme solarized
+
+" Set utf8 as standard encoding
+set encoding=utf8
+
+" Use Unix as the standard file type
+set ffs=unix,dos,mac
+
+" = = = = = = = = = = = = = = = = = = = = =
+" Text, tab and indent related            =
+" = = = = = = = = = = = = = = = = = = = = =
+
+" Use spaces instead of tabs
+set expandtab
+
+" Be smart when using tabs ;)
+set smarttab
+
+" 1 tab == 4 spaces
+set shiftwidth=4
+set tabstop=4
+
+set ai "Auto indent
+set si "Smart indent
+set wrap "Wrap line
+
+" = = = = = = = = = = = = = = = = = = = = =
+" Python section                          =
+" = = = = = = = = = = = = = = = = = = = = =
+
+let python_highlight_all = 1
+au FileType python syn keyword pythonDecorator True None False self
+
+au BufNewFile,BufRead *.jinja set syntax=htmljinja
+au BufNewFile,BufRead *.mako set ft=mako
+
+au FileType python map <buffer> F :set foldmethod=indent<cr>
+
+au FileType python inoremap <buffer> $r return
+au FileType python inoremap <buffer> $i import
+au FileType python inoremap <buffer> $p print
+au FileType python inoremap <buffer> $f # --- <esc>a
+au FileType python map <buffer> <leader>1 /class
+au FileType python map <buffer> <leader>2 /def
+au FileType python map <buffer> <leader>C ?class
+au FileType python map <buffer> <leader>D ?def
+
+
