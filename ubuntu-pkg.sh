@@ -11,8 +11,6 @@ sudo apt autoremove
 sudo apt remove -y vim-tiny
 sudo apt update
 sudo apt install -y vim
-git clone https://github.com/amix/vimrc.git ~/.vim_runtime
-sh ~/.vim_runtime/install_awesome_vimrc.sh
 
 # Make exFAT Portable Disk can be read
 sudo add-apt-repository universe
