@@ -1,5 +1,17 @@
 #!/bin/bash
 
+# Check/Install VundleVim
+if test -e ~/.vim/bundle/Vundle.vim
+then
+    cd ~/.vim/bundle/Vundle.vim
+    git fetch && git pull
+    cd ~
+else
+    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+fi
+
+
+# Check ~/.vim/colors exist
 if test -d ~/.vim/colors
 then
     echo "~/.vim/colors exist"
@@ -7,18 +19,22 @@ else
     mkdir -p  ~/.vim/colors
 fi
 
-if test -d ~/.vim-colors-solarized
+# Check ~/.vim/bundle exist
+if test -d ~/.vim/bundle
 then
-    rm -rf ~/.vim-colors-solarized
-    echo "~/.vim-colors-solarized removed"
+    echo "~/.vim/bundle exist"
+else
+    mkdir -p ~/.vim/bundle
 fi
 
-git clone https://github.com/altercation/vim-colors-solarized ~/.vim-colors-solarized
-
-if test -e ~/.vim/colors/solarized.vim
+# Bundle vim-colors-solarized
+if test -d ~/.vim/bundle/vim-colors-solarized
 then
-    rm ~/.vim/colors/solarized.vim
+    :
+else
+    git clone git://github.com/altercation/vim-colors-solarized.git ~/vim-colors-solarized
+    mv ~/vim-colors-solarized ~/.vim/bundle/
 fi
 
-mv ~/.vim-colors-solarized/colors/solarized.vim ~/.vim/colors/solarized.vim
-rm -rf ~/.vim-colors-solarized
+# Intall All Plugins
+vim +PluginInstall +qall
