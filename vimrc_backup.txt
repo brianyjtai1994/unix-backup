@@ -124,18 +124,17 @@ nnoremap q :wq
 " press 's' for ':w'
 nnoremap s :w
 
-" press '0' for end of a line
-nnoremap $ 0
-
-" press '1'for end of a line
-nnoremap 0 1
-
 " remap the arrows
 noremap <Up> k
 noremap <Down> j
 noremap <Left> h
 noremap <Right> l
 
+" Autocomplete
+inoremap ( ()<ESC>i
+inoremap [ []<ESC>i
+inoremap { {}<ESC>i
+inoremap < <><ESC>i
 
 " = = = = = = = = = = = = = = = = = = = = =
 " Python section                          =
