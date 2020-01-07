@@ -4,9 +4,6 @@
 " VundleVim                               =
 " = = = = = = = = = = = = = = = = = = = = =
 
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -36,8 +33,17 @@ set wildmenu
 " Always show the status line
 set laststatus=2
 
+" Always show current mode
+set showmode
+
+" Format the status line
+set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
+
 "Always show current position
 set ruler
+
+" Toggle on line number
+set number
 
 " Height of the command bar
 set cmdheight=1
@@ -78,7 +84,7 @@ syntax enable
 
 let g:solarized_termcolors=256
 
-set background=dark
+set background=light
 
 "colorscheme solarized
 
@@ -107,6 +113,25 @@ set si "Smart indent
 set wrap "Wrap line
 
 " = = = = = = = = = = = = = = = = = = = = =
+" Keyboard Section                        =
+" = = = = = = = = = = = = = = = = = = = = =
+
+set cursorline
+
+" press 'q' for ':wq'
+nnoremap q :wq 
+
+" press 's' for ':w'
+nnoremap s :w
+
+" remap the arrows
+noremap <Up> k
+noremap <Down> j
+noremap <Left> h
+noremap <Right> l
+
+
+" = = = = = = = = = = = = = = = = = = = = =
 " Python section                          =
 " = = = = = = = = = = = = = = = = = = = = =
 
@@ -127,4 +152,14 @@ au FileType python map <buffer> <leader>2 /def
 au FileType python map <buffer> <leader>C ?class
 au FileType python map <buffer> <leader>D ?def
 
+" = = = = = = = = = = = = = = = = = = = = =
+" Other Function                          =
+" = = = = = = = = = = = = = = = = = = = = =
 
+" Returns true if paste mode is enabled
+function! HasPaste()
+    if &paste
+        return 'PASTE MODE  '
+    endif
+    return ''
+endfunction
