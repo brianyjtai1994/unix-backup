@@ -42,3 +42,7 @@ sudo apt-get -y install libopenblas-dev libatlas-base-dev liblapack-dev gfortran
 sudo apt-get -y install libhdf5-serial-dev
 sudo apt-get -y install python3-dev python3-tk python-imaging-tk
 sudo apt-get -y install libgtk-3-dev
+
+# install "Texlive" and "Texmaker"
+sudo apt-get install texlive-full
+sudo apt-get install texmaker
