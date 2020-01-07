@@ -4,12 +4,12 @@ clear
 
 cd ~
 
-pip3 install -U pip
-pip3 install -U numpy
-pip3 install -U scipy
-pip3 install -U matplotlib
-pip3 install -U requests-html
-pip3 install -U jupyter notebook
-pip3 install -U opencc-python-reimplemented
+sudo -H pip3 install -U pip
+sudo -H pip3 install -U numpy
+sudo -H pip3 install -U scipy
+sudo -H pip3 install -U matplotlib
+sudo -H pip3 install -U requests-html
+sudo -H pip3 install -U jupyter notebook
+sudo -H pip3 install -U opencc-python-reimplemented
 
 clear
