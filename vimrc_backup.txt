@@ -124,6 +124,11 @@ set wrap "Wrap line
 " For regular expressions turn magic on
 set magic
 
+set softtabstop=4
+set textwidth=79
+set autoindent
+set fileformat=unix
+
 " = = = = = = = = = = = = = = = = = = = = =
 " Keyboard Section                        =
 " = = = = = = = = = = = = = = = = = = = = =
@@ -156,15 +161,6 @@ inoremap " ""<ESC>i
 
 let python_highlight_all = 1
 au FileType python syn keyword pythonDecorator True None False self
-
-au BufNewFile,BufRead *.py
-    \ set tabstop=4
-    \ set softtabstop=4
-    \ set shiftwidth=4
-    \ set textwidth=79
-    \ set expandtab
-    \ set autoindent
-    \ set fileformat=unix
 
 au FileType python map <buffer> F :set foldmethod=indent<cr>
 
