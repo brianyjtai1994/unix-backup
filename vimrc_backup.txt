@@ -16,6 +16,10 @@ Plugin 'VundleVim/Vundle.vim'
 " Custom Plugin here >>>
 
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'vim-scripts/indentpython.vim'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'nvie/vim-flake8'
+Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 " Custom Plugin here <<
 
@@ -121,6 +125,8 @@ set wrap "Wrap line
 " For regular expressions turn magic on
 set magic
 
+set encoding=utf-8
+
 " = = = = = = = = = = = = = = = = = = = = =
 " Keyboard Section                        =
 " = = = = = = = = = = = = = = = = = = = = =
@@ -154,8 +160,15 @@ inoremap " ""<ESC>i
 let python_highlight_all = 1
 au FileType python syn keyword pythonDecorator True None False self
 
-au BufNewFile,BufRead *.jinja set syntax=htmljinja
-au BufNewFile,BufRead *.mako set ft=mako
+
+au BufNewFile,BufRead *.py
+    \ set tabstop=4
+    \ set softtabstop=4
+    \ set shiftwidth=4
+    \ set textwidth=79
+    \ set expandtab
+    \ set autoindent
+    \ set fileformat=unix
 
 au FileType python map <buffer> F :set foldmethod=indent<cr>
 
