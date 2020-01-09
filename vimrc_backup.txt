@@ -19,7 +19,6 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'nvie/vim-flake8'
-Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 " Custom Plugin here <<
 
@@ -125,8 +124,6 @@ set wrap "Wrap line
 " For regular expressions turn magic on
 set magic
 
-set encoding=utf-8
-
 " = = = = = = = = = = = = = = = = = = = = =
 " Keyboard Section                        =
 " = = = = = = = = = = = = = = = = = = = = =
@@ -159,7 +156,6 @@ inoremap " ""<ESC>i
 
 let python_highlight_all = 1
 au FileType python syn keyword pythonDecorator True None False self
-
 
 au BufNewFile,BufRead *.py
     \ set tabstop=4
