@@ -18,7 +18,6 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'vim-syntastic/syntastic'
-Plugin 'nvie/vim-flake8'
 
 " Custom Plugin here <<
 
