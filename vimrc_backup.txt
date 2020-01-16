@@ -54,7 +54,7 @@ set cmdheight=1
 set ignorecase
 
 " Add a bit extra margin to the left
-set foldcolumn=1
+set foldcolumn=3
 
 " Turn backup off
 set nobackup
