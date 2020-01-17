@@ -17,6 +17,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-scripts/indentpython.vim'
+Plugin 'JuliaEditorSupport/julia-vim'
 
 " Custom Plugin here <<
 
