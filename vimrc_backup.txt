@@ -133,27 +133,16 @@ set fileformat=unix
 " Keyboard Section                        =
 " = = = = = = = = = = = = = = = = = = = = =
 
-set cursorline
+set nocursorline
+
+" Scroll 8 lines at a time at bottom/top
+set scrolljump=8
 
 " press 'q' for ':wq'
 nnoremap q :wq 
 
 " press 's' for ':w'
 nnoremap s :w
-
-" remap the arrows
-noremap <Up> k
-noremap <Down> j
-noremap <Left> h
-noremap <Right> l
-
-" Autocomplete
-inoremap ( ()<ESC>i
-inoremap [ []<ESC>i
-inoremap { {}<ESC>i
-inoremap < <><ESC>i
-inoremap ' ''<ESC>i
-inoremap " ""<ESC>i
 
 " = = = = = = = = = = = = = = = = = = = = =
 " Python section                          =
