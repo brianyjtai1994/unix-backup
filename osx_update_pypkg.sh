@@ -4,15 +4,13 @@ clear
 
 cd ~
 
-sudo -H pip3 install -U pip
-sudo -H pip3 install -U numpy
-sudo -H pip3 install -U scipy
-sudo -H pip3 install -U Pygments
-sudo -H pip3 install -U matplotlib
-sudo -H pip3 install -U PyQt5
-sudo -H pip3 install -U requests-html
-sudo -H pip3 install -U jupyter notebook
-sudo -H pip3 install -U OpenCC
-sudo -H pip3 install git+https://github.com/brianyjtai1994/teralab.git@v0.1.3
+pip3 install -U pip
+pip3 install -U numpy
+pip3 install -U scipy
+pip3 install -U Pygments
+pip3 install -U matplotlib
+pip3 install -U PyQt5
+pip3 install -U requests-html
+pip3 install -U jupyter notebook
+pip3 install -U OpenCC
 
-clear
