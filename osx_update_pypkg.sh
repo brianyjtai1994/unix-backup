@@ -4,13 +4,13 @@ clear
 
 cd ~
 
-pip3 install -U pip
-pip3 install -U numpy
-pip3 install -U scipy
-pip3 install -U Pygments
-pip3 install -U matplotlib
-pip3 install -U PyQt5
-pip3 install -U requests-html
-pip3 install -U jupyter notebook
-pip3 install -U OpenCC
+pip3 install --user --upgrade pip
+pip3 install --user --upgrade numpy
+pip3 install --user --upgrade scipy
+pip3 install --user --upgrade Pygments
+pip3 install --user --upgrade matplotlib
+pip3 install --user --upgrade PyQt5
+pip3 install --user --upgrade requests-html
+pip3 install --user --upgrade jupyter notebook
+pip3 install --user --upgrade OpenCC
 
