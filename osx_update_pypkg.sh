@@ -10,7 +10,5 @@ pip3 install --user --upgrade scipy
 pip3 install --user --upgrade Pygments
 pip3 install --user --upgrade matplotlib
 pip3 install --user --upgrade PyQt5
-pip3 install --user --upgrade requests-html
 pip3 install --user --upgrade jupyter notebook
-pip3 install --user --upgrade OpenCC
 
