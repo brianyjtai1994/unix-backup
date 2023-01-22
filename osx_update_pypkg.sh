@@ -4,11 +4,10 @@ clear
 
 cd ~
 
-pip3 install --user --upgrade pip
-pip3 install --user --upgrade numpy
-pip3 install --user --upgrade scipy
-pip3 install --user --upgrade Pygments
-pip3 install --user --upgrade matplotlib
-pip3 install --user --upgrade PyQt5
-pip3 install --user --upgrade jupyter notebook
+python3.11 -m pip install --upgrade pip
+python3.11 -m pip install --upgrade numpy
+python3.11 -m pip install --upgrade scipy
+python3.11 -m pip install --upgrade matplotlib
+python3.11 -m pip install --upgrade PyQt5
+python3.11 -m pip install --upgrade jupyter notebook
 
