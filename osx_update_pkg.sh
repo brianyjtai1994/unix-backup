@@ -3,9 +3,7 @@
 sudo clear
 cd ~
 
-brew update
-brew upgrade
-brew cleanup
+brew update && brew upgrade && brew cleanup
 
 python3.11 -m pip install --upgrade pip
 python3.11 -m pip install --upgrade numpy
